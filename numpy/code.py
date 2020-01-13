@@ -12,7 +12,7 @@ census=np.concatenate((data,new_record),axis=0)
 
 
 
-# --------------
+# We too want to do a simple analysis of the age distribution--------------
 #Code starts here
 age=census[:,0]
 max_age=age.max()
