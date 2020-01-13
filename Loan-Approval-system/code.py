@@ -35,7 +35,7 @@ print(m)                #no of null values after cleaning
 
 
 
-# --------------
+#Now let's check the loan amount of an average person based on 'Gender', 'Married', 'Self_Employed' --------------
 # Code starts here
 
 avg_loan_amount=pd.pivot_table(banks,index=["Gender","Married","Self_Employed"],values=["LoanAmount"],aggfunc=np.mean)
@@ -72,7 +72,7 @@ print (percentage_nse)
 # code ends here
 
 
-# --------------
+#Transform the loan tenure from months to years --------------
 # code starts here
 loan_term=banks["Loan_Amount_Term"].apply(lambda x:x/12)
 
@@ -83,7 +83,7 @@ print(big_loan_term)
 # code ends here
 
 
-# --------------
+# Income/ Credit History vs Loan Amount--------------
 # code starts here
 
 columns_to_show = ['ApplicantIncome', 'Credit_History']
