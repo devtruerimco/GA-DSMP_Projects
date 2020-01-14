@@ -1,4 +1,4 @@
-# --------------
+# read file and split the dataset--------------
 import pandas as pd
 import numpy as np
 from sklearn.cross_validation import train_test_split
@@ -15,7 +15,7 @@ X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.3,random_state=6)
 
 
 
-# --------------
+#  scatter_plot for different features vs target variable list_price--------------
 import matplotlib.pyplot as plt
 
 # code starts here        
@@ -39,18 +39,19 @@ plt.show()
 # --------------
 # Code starts here
 
-corr=X_train.corr()
+# corr code
+corr = X_train.corr()
 print(corr)
+# drop columns from X_train
+X_train.drop(['play_star_rating','val_star_rating'],axis = 1 ,inplace=True)
 
-
-X_train=X_train.drop(["play_star_rating","val_star_rating"],axis=1)
-X_test=X_test.drop(["play_star_rating","val_star_rating"],axis=1)
-
+# drop columns from X_test
+X_test.drop(['play_star_rating','val_star_rating'], axis = 1 ,inplace=True)
 
 # Code ends here
 
 
-# --------------
+#Apply Linear regression and check mse,r2 score --------------
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 
@@ -71,11 +72,18 @@ print("r2:",r2)
 
 # --------------
 # Code starts here
-residual=y_test-y_pred
-plt.hist(residual)
+
+
+# calculate the residual
+residual = (y_test - y_pred)
+
+# plot the figure for residual
+plt.figure(figsize=(15,8))
+plt.hist(residual, bins=30)
+plt.xlabel("Residual")
+plt.ylabel("Frequency")   
+plt.title("Error Residual plot")
 plt.show()
-
-
 
 # Code ends here
 
