@@ -1,4 +1,4 @@
-# --------------
+#Load data --------------
 import pandas as pd
 from sklearn.model_selection import train_test_split
 #path - Path of file 
@@ -63,16 +63,11 @@ y_test = y_test.replace({'No':0, 'Yes':1})
 
 
 
-# --------------
+
+#AdaBoost Implementation --------------
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
 
-# Code starts here
-"""print(X_train.head())
-print(X_test.head())
-print(y_train.head())
-print(y_test.head())
-"""
 ada_model=AdaBoostClassifier(random_state=0)
 
 ada_model.fit(X_train,y_train)
@@ -88,9 +83,9 @@ ada_cr=classification_report(y_test,y_pred)
 print("accuracy score:%.2f"%ada_score)
 print("confusion matric:",ada_cm)
 print("clasification report:",ada_cr)
+    
 
-
-# --------------
+#XgBoost Implementation  --------------
 from xgboost import XGBClassifier
 from sklearn.model_selection import GridSearchCV
 
