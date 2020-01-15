@@ -9,21 +9,15 @@ from sklearn import preprocessing
 
 # read the dataset
 dataset=pd.read_csv(path)
-dataset.drop(columns="Id",inplace=True)
-
-#print("Dataset(5):",dataset.head())
-
-print(dataset.describe())
-
 
 # look at the first five columns
-
+print(dataset.head())
 
 # Check if there's any column which is not useful and remove it like the column id
-
+dataset.drop(columns="Id",inplace=True)
 
 # check the statistical description
-
+print(dataset.describe())
 
 
 # --------------
