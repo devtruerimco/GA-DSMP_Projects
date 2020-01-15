@@ -6,7 +6,10 @@ from sklearn.model_selection import train_test_split
 
 
 # Code starts here
+#Load data
 data=pd.read_csv(path)
+
+Assign variables to dependant and independant features
 X=data.drop(columns=["customer.id","paid.back.loan"])
 y=data["paid.back.loan"]
 
@@ -14,29 +17,26 @@ y=data["paid.back.loan"]
 X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.3,random_state=0)
 
 
-# Code ends here
 
 
-# --------------
+# Plot bar graph of paid.back.loan--------------
 #Importing header files
 import matplotlib.pyplot as plt
 
-# Code starts here
+# Storing value counts of target variable in "fully_paid"
 fully_paid=y_train.value_counts()
 
+#Plotting bar graph
 fully_paid.plot(kind="bar")
 plt.show()
 
-# Code ends here
 
 
-# --------------
+# with one step of feature engineering, we will split the features based on the data type for visualization purposes --------------
 #Importing header files
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 
-
-# Code starts here
 #Removing the "%" and converting column to float type 
 X_train["int.rate"]=X_train["int.rate"].str.replace("%","").astype("float")
 
@@ -56,12 +56,9 @@ cat_df=X_train.select_dtypes(include=["object"])
 
 
 
+# plot the relation of numerical features with the target variable.
 
-
-# Code ends here
-
-
-# --------------
+ --------------
 #Importing header files
 import seaborn as sns
 
@@ -70,10 +67,8 @@ import seaborn as sns
 #Setting the figure size
 plt.figure(figsize=(20,20))
 
-
 #Storing the columns of 'num_df'
 cols=list(num_df.columns)
-
 
 #Creating subplots
 fig,axes=plt.subplots(9,1, figsize=(10,20))
@@ -88,19 +83,17 @@ for i in range(9):
     fig.tight_layout()    
 
     
-#Code ends here
+
+   
 
 
-# --------------
+#plot the relation of categorical features with the target variable. --------------
 # Code starts here
 
 plt.figure(figsize=(20,20))
 
-
 #Storing the columns of 'cat_df'
 cols=list(cat_df.columns)
-
-
 
 #Creating subplots
 fig,axes=plt.subplots(2,2, figsize=(10,20))
@@ -116,10 +109,10 @@ for i in range(2):
         fig.tight_layout()    
 
 
-# Code ends here
 
+        
 
-# --------------
+#Modelling a decision tree --------------
 #Importing header files
 from sklearn.tree import DecisionTreeClassifier
 
@@ -161,10 +154,10 @@ acc=model.score(X_test, y_test)
 #Printing the accuracy
 print(acc)
 
-#Code ends here
 
 
-# --------------
+
+#Use GridSearch to do the optimum pruning--------------
 #Importing header files
 from sklearn.model_selection import GridSearchCV
 
@@ -183,10 +176,9 @@ print("Accuracy score:",acc_2)
 
 
 
-# Code ends here
 
 
-# --------------
+#Visualize prunned Decision tree with graphviz --------------
 #Importing header files
 
 from io import StringIO
@@ -196,12 +188,11 @@ from sklearn import metrics
 from IPython.display import Image
 import pydotplus
 
-# Code starts here
-
+#Creating DOT data
 dot_data=export_graphviz(decision_tree=p_tree.best_estimator_,out_file=None,feature_names=X.columns,filled=True,class_names=["loan_paid_back_yes","loan_paid_back_no"])
-
+#Drawing graph
 graph_big=pydotplus.graph_from_dot_data(dot_data)
-
+#Displaying graph
 img_path = user_data_dir+'/file.png'
 graph_big.write_png(img_path)
 
@@ -211,5 +202,4 @@ plt.axis('off')
 plt.show() 
 
 # Code ends here
-
 
