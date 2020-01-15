@@ -202,7 +202,6 @@ dot_data=export_graphviz(decision_tree=p_tree.best_estimator_,out_file=None,feat
 
 graph_big=pydotplus.graph_from_dot_data(dot_data)
 
-# show graph - do not delete/modify the code below this line
 img_path = user_data_dir+'/file.png'
 graph_big.write_png(img_path)
 
