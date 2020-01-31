@@ -2,10 +2,9 @@ Customer churn, also known as customer attrition, customer turnover, or customer
 
 Predictive analytics use churn prediction models that predict customer churn by assessing their propensity of risk to churn. Since these models generate a small prioritized list of potential defectors, they are effective at focusing customer retention marketing programs on the subset of the customer base who are most vulnerable to churn.
 
-For this project we will be exploring the dataset of a telecom company and try to predict the customer churn
+For this project we will be using the dataset of a telecom company and try to predict the customer churn
 
-Problem Statement
-Using the method of Boosting, classify whether or not the customer will churn.
+
 
 The dataset consists of the following features:
 customerID	gender	SeniorCitizen	Partner	Dependents	tenure	PhoneService	MultipleLines	InternetService	OnlineSecurity	OnlineBackup	DeviceProtection	TechSupport	StreamingTV	StreamingMovies	Contract	PaperlessBilling	PaymentMethod	MonthlyCharges	TotalCharges	Churn
