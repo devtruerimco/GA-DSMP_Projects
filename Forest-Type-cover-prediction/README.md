@@ -58,10 +58,12 @@ Feature	Description
 
 The wilderness areas are:
 
-
 Rawah Wilderness Area
+
 Neota Wilderness Area
+
 Comanche Peak Wilderness Area
+
 Cache la Poudre Wilderness Area
 
 
