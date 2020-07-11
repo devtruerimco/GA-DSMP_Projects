@@ -1,20 +1,22 @@
-### Project Overview
+# Project Overview
 
- Problem Statement
+##Problem Statement
 The problem statement revolves around the need to predict the forest cover type (the predominant kind of tree cover) from strictly cartographic variables (as opposed to remotely sensed data).
 
 It includes four wilderness areas located in the Roosevelt National Forest of northern Colorado. These areas represent forests with minimal human-caused disturbances, so that existing forest cover types are more a result of ecological processes rather than forest management practices.
 
-The study area includes four wilderness areas located in the Roosevelt National Forest of northern Colorado. Each observation is a 30m x 30m patch. You are asked to predict an integer classification for the forest cover type. The seven types are:
+The study area includes four wilderness areas located in the Roosevelt National Forest of northern Colorado. Each observation is a 30m x 30m patch. You are asked to predict an integer classification for the forest cover type. 
+
+###The seven types are:
 
 1 - Spruce/Fir 2 - Lodgepole Pine 3 - Ponderosa Pine 4 - Cottonwood/Willow 5 - Aspen 6 - Douglas-fir 7 - Krummholz
 
 
-About the dataset:
+###About the dataset:
 The data set (15120 observations) contains both features and the Cover_Type.
 
 
-Feature	Description
+###Feature	Description
 [Elevation------	Elevation in meters]
 
 
@@ -56,7 +58,7 @@ Feature	Description
 
 
 
-The wilderness areas are:
+###The wilderness areas are:
 
 Rawah Wilderness Area
 
@@ -68,48 +70,87 @@ Cache la Poudre Wilderness Area
 
 
 
-The soil types are:
-
+###The soil types are:
 
 Cathedral family - Rock outcrop complex, extremely stony.
+
 Vanet - Ratake families complex, very stony.
+
 Haploborolis - Rock outcrop complex, rubbly.
+
 Ratake family - Rock outcrop complex, rubbly.
+
 Vanet family - Rock outcrop complex, rubbly.
+
 Vanet - Wetmore families - Rock outcrop complex, stony.
+
 Gothic family.
+
 Supervisor - Limber families complex.
+
 Troutville family, very stony.
+
 Bullwark - Catamount families - Rock outcrop complex, rubbly.
+
 Bullwark - Catamount families - Rock land complex, rubbly.
+
 Legault family - Rock land complex, stony.
+
 Catamount family - Rock land - Bullwark family complex, rubbly.
+
 Pachic Argiborolis - Aquolis complex.
+
 unspecified in the USFS Soil and ELU Survey.
+
 Cryaquolis - Cryoborolis complex.
+
 Gateview family - Cryaquolis complex.
+
 Rogert family, very stony.
+
 Typic Cryaquolis - Borohemists complex.
+
 Typic Cryaquepts - Typic Cryaquolls complex.
+
 Typic Cryaquolls - Leighcan family, till substratum complex.
+
 Leighcan family, till substratum, extremely bouldery.
+
 Leighcan family, till substratum - Typic Cryaquolls complex.
+
 Leighcan family, extremely stony.
+
 Leighcan family, warm, extremely stony.
+
 Granile - Catamount families complex, very stony.
+
 Leighcan family, warm - Rock outcrop complex, extremely stony.
+
 Leighcan family - Rock outcrop complex, extremely stony.
+
 Como - Legault families complex, extremely stony.
+
 Como family - Rock land - Legault family complex, extremely stony.
+
 Leighcan - Catamount families complex, extremely stony.
+
 Catamount family - Rock outcrop - Leighcan family complex, extremely stony.
+
 Leighcan - Catamount families - Rock outcrop complex, extremely stony.
+
 Cryorthents - Rock land complex, extremely stony.
+
 Cryumbrepts - Rock outcrop - Cryaquepts complex.
+
 Bross family - Rock land - Cryumbrepts complex, extremely stony.
+
 Rock outcrop - Cryumbrepts - Cryorthents complex, extremely stony.
+
 Leighcan - Moran families - Cryaquolls complex, extremely stony.
+
 Moran family - Cryorthents - Leighcan family complex, extremely stony.
+
 Moran family - Cryorthents - Rock land complex, extremely stony.
+
 
 
