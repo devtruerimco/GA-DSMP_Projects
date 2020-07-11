@@ -8,5 +8,7 @@ For this project we will be using the dataset of a telecom company and try to pr
 
 
 
+
 The dataset consists of the following features:
+
 customerID	gender	SeniorCitizen	Partner	Dependents	tenure	PhoneService	MultipleLines	InternetService	OnlineSecurity	OnlineBackup	DeviceProtection	TechSupport	StreamingTV	StreamingMovies	Contract	PaperlessBilling	PaymentMethod	MonthlyCharges	TotalCharges	Churn
