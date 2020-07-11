@@ -1,4 +1,4 @@
-Problem Statement:
+## Problem Statement:
 
 Customer churn, also known as customer attrition, customer turnover, or customer defection, is the loss of clients or customers.Telephone service companies, Internet service providers, pay TV companies, insurance firms, and alarm monitoring services, often use customer attrition analysis and customer attrition rates as one of their key business metrics because the cost of retaining an existing customer is far less than acquiring a new one.
 
@@ -9,6 +9,26 @@ For this project we will be using the dataset of a telecom company and try to pr
 
 
 
-The dataset consists of the following features:
+### The dataset consists of the following features:
 
-customerID	gender	SeniorCitizen	Partner	Dependents	tenure	PhoneService	MultipleLines	InternetService	OnlineSecurity	OnlineBackup	DeviceProtection	TechSupport	StreamingTV	StreamingMovies	Contract	PaperlessBilling	PaymentMethod	MonthlyCharges	TotalCharges	Churn
+- customerID
+- gender	
+- SeniorCitizen	
+- Partner	
+- Dependents	
+- tenure	
+- PhoneService	
+- MultipleLines	
+- InternetService	
+- OnlineSecurity	
+- OnlineBackup	
+- DeviceProtection	
+- TechSupport 
+-	StreamingTV	
+- StreamingMovies 
+-	Contract
+-	PaperlessBilling 
+-	PaymentMethod	
+- MonthlyCharges 
+- TotalCharges	
+- Churn
